@@ -13,6 +13,19 @@
 @endif
 
 <section class="p-3 table-responsive">
+    <section class="d-flex justify-content-center">
+        <form action="/faqs" method="GET" class="col-md-6 d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Busca" name="busca" aria-label="Busca">
+            <button class="btn btn-outline-success" type="submit">Busca</button>
+        </form>
+    </section>
+
+    @if($busca)
+    <section>
+        Resultados para: {{$busca}}
+    </section>
+    @endif
+
     <table class="table table-striped table-hover">
         <thead>
             <tr>

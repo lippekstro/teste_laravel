@@ -13,8 +13,17 @@ class FaqController extends Controller
      */
     public function index()
     {
-        $faqs = Faq::all();
-        return view('faqs.faqs', ['faqs' => $faqs]);
+        $busca = request('busca');
+
+        if ($busca) {
+            $faqs = Faq::where([
+                ['pergunta', 'like', '%' . $busca . '%']
+            ])->get();
+        } else {
+            $faqs = Faq::all();
+        }
+
+        return view('faqs.faqs', ['faqs' => $faqs, 'busca' => $busca]);
     }
 
     /**
