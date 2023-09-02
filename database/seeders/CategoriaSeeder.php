@@ -2,17 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\Faq;
+use App\Models\Categoria;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class FaqSeeder extends Seeder
+class CategoriaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Faq::factory(5)->create();
+        Categoria::factory(5)->create();
     }
 }

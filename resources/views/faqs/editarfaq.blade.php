@@ -4,8 +4,8 @@
 
 @section('conteudo')
 
-<section class="col-md-5 m-md-auto m-3">
-    <form action="/faqs/{{$faq->id}}" method="post">
+<section class="col-md-5 mx-md-auto m-3">
+    <form action="/faqs/{{$faq->id}}" method="post" class="p-3 rounded bg-dark-subtle">
         @csrf
         @method('PUT')
         <div class="mb-3">

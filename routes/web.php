@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ProdutoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +20,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [WelcomeController::class, 'index']);
 
 Route::resource('faqs', FaqController::class);
+Route::resource('produtos', ProdutoController::class);
+Route::resource('categorias', CategoriaController::class);

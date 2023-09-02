@@ -4,8 +4,8 @@
 
 @section('conteudo')
 
-<section class="col-md-5 m-md-auto m-3">
-    <form action="/faqs" method="post">
+<section class="col-md-5 mx-md-auto m-3">
+    <form action="/faqs" method="post" class="p-3 rounded bg-dark-subtle">
         @csrf
 
         <div class="mb-3">
